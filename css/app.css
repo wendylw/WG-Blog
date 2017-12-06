@@ -1,0 +1,82 @@
+.intro {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-w {
+    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    background: black;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 0% 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.intro-g {
+    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    background: white;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.intro-w .content {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+.intro-w .text {
+    color: white;
+}
+
+.intro-w .button {
+    position: absolute;
+    left: 49%;
+    top: 45%;
+    /*I do not know why radius in html has no func*/
+    border-radius: 50%;
+    background: white;
+}
+
+.intro-g .content {
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+}
+
+.intro-g .text {
+    color: #333;
+    margin: 0;
+}
+
+.intro-g .button {
+    position: absolute;
+    right: 49%;
+    bottom: 45%;
+    /*I do not know why radius in html has no func*/
+    border-radius: 50%;
+    background: black;
+}
+
+.show-all {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
