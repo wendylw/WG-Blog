@@ -3,8 +3,31 @@
     height: 100%;
 }
 
+.intro .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.intro .text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.intro .button {
+  /*I do not know why radius in html has no func*/
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
 .intro-w {
-    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    transition: 60s cubic-bezier(1, -1, 0, 2);
     background: black;
     width: 100%;
     height: 100%;
@@ -16,7 +39,7 @@
 }
 
 .intro-g {
-    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    transition: 60s cubic-bezier(1, -1, 0, 2);
     background: white;
     width: 100%;
     height: 100%;
@@ -25,17 +48,6 @@
     position: absolute;
     left: 0;
     top: 0;
-}
-
-.img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.text {
-    font-size: 20px;
-    text-align: center;
 }
 
 .intro-w .content {
@@ -49,12 +61,15 @@
 }
 
 .intro-w .button {
-    position: absolute;
-    left: 49%;
-    top: 45%;
-    /*I do not know why radius in html has no func*/
-    border-radius: 50%;
     background: white;
+}
+
+.intro-w .button.back,
+.intro-g .button.back {
+    transition: all 0.5s ease-in-out;
+    left: 120px;
+    top: 120px;
+    /*use animation then*/
 }
 
 .intro-g .content {
@@ -69,14 +84,18 @@
 }
 
 .intro-g .button {
-    position: absolute;
-    right: 49%;
-    bottom: 45%;
-    /*I do not know why radius in html has no func*/
-    border-radius: 50%;
     background: black;
 }
 
 .show-all {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+}
+
+.show-all .content {
+    left: 50%;
+    top: 50%;
+    margin-left: -75px;
+    margin-top: -99px;
+    transition: all 0.5s ease;
 }
