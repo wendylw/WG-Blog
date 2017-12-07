@@ -6,26 +6,35 @@ $(function(){
     $(document).foundation();
 
     // Animation for intro-w
-    $('.intro-g .button').click(function() {
-       $('.intro-w').addClass('show-all');
-        $('.intro-w .button').addClass('back');
-
-        $('.back').click(function() {
-            $('.intro-w').removeClass('show-all');
-            $('.intro-g').removeClass('show-all');
-            $(this).removeClass('back');
-        });
+    $('.intro-g .show-btn').click(function() {
+       $('.intro-w').addClass('whole-page');
+       $('.show-btn').hide();
+       $('.intro-w .back-btn')
+           .show()
+           .animate({
+               transition: 'all 0.5s ease-in-out',
+               left: '120px',
+               top: '120px'
+            });
     });
 
     // Animation for intro-g
-    $('.intro-w .button').click(function() {
-        $('.intro-g').addClass('show-all');
-        $('.intro-g .button').addClass('back');
+    $('.intro-w .show-btn').click(function() {
+        $('.intro-g').addClass('whole-page');
+        $('.show-btn').hide();
+        $('.intro-g .back-btn')
+            .show()
+            .animate({
+                transition: 'all 0.5s ease-in-out',
+                left: '120px',
+                top: '120px'
+            });
+    });
 
-        $('.back').click(function() {
-            $('.intro-w').removeClass('show-all');
-            $('.intro-g').removeClass('show-all');
-            $(this).removeClass('back');
-        });
+    $('.intro').delegate('.whole-page', 'click', function() {
+        $(this).removeClass('whole-page');
+        $(this).find('.back-btn').hide();
+        $('.show-btn').show();
     });
 });
+
