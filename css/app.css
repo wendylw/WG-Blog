@@ -3,17 +3,17 @@
     height: 100%;
 }
 
-.intro .content {
+.intro-content {
     max-width: 150px;
 }
 
-.intro .img {
+.intro-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
 
-.intro .text {
+.intro-text {
     font-size: 20px;
     text-align: center;
 }
@@ -47,13 +47,13 @@
     top: 0;
 }
 
-.intro-w .content {
+.intro-w .intro-content {
     position: absolute;
     left: 20%;
     top: 20%;
 }
 
-.intro-w .text {
+.intro-w .intro-text {
     color: white;
 }
 
@@ -74,13 +74,13 @@
     top: 0;
 }
 
-.intro-g .content {
+.intro-g .intro-content {
     position: absolute;
     right: 20%;
     bottom: 20%;
 }
 
-.intro-g .text {
+.intro-g .intro-text {
     color: #333;
     margin: 0;
 }
@@ -95,10 +95,34 @@
     z-index: 1;
 }
 
-.whole-page .content {
+.whole-page .intro-content {
     left: 50%;
     top: 50%;
     margin-left: -75px;
     margin-top: -99px;
     transition: all 0.5s ease;
+}
+
+
+/*
+section 3 - interests
+*/
+.interest p {
+    margin-top: 10px;
+}
+
+.interest-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #0c3d5d;
+}
+
+/*placeholder*/
+.interest-img.swiming {
+    background-color: #3adb76;
+}
+
+.interest-img.playing {
+    background-color: #cc8b00;
 }
