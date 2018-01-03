@@ -26,9 +26,37 @@
   overflow-x: hidden;
 }
 
+.content__article {
+  -webkit-box-flex: 1;
+
+  flex: auto;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
 .content__nav {
   display: block;
+  padding: 0 30px;
   width: 100%;
   min-height: 70px;
   background-color: #e7eef0;
+}
+
+.content__nav a {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 70px;
+  color: #8fa4af;
+  text-decoration: none;
+}
+
+.content__nav a.active {
+  border-bottom: 3px solid #745af2;
+  color: #745af2;
+  font-weight: bold;
 }
