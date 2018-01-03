@@ -5,7 +5,29 @@ body,
 
   font-family: "Helvetica Nenue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
   font-size: 12px;
-  color: #333;
+  color: #565656;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.083333em;
+}
+
+p, span {
+  font-size: 1em;
+}
+
+a {
+  color: #4a90e2;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .blog__container {
